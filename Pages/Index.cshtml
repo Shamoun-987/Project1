@@ -1,0 +1,15 @@
+﻿@page
+@model GruppProjectAPI.Pages.IndexModel
+
+<h1>Väder i Borås på senaste 7 dagar</h1>
+
+@if (Model.Failed)
+{
+	<p style="color:orange;">Fel från att ta ut data från API. Försök senare</p>
+}
+else
+{
+	<p><b>Genomsnitt temperatur:</b> @Model.AvgTemperatur Grader</p>
+	<p>----------------------------------------------------------------------------------------</p>
+	<p><b>Genomsnitt nederbörd:</b> @Model.AvgRain mm per dag</p>
+}
